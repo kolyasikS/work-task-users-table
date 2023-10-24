@@ -1,0 +1,67 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.table {
+    table {
+        overflow: visible;
+    }
+}
+
+.table__cell {
+    max-width: 400px;
+}
+
+.table__row {
+    transition: all .1s;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+        background: #2b3031;
+    }
+}
+
+.empty__row, .table__header {
+    cursor: default;
+    &:hover {
+        background: inherit;
+    }
+}
+
+.table__row_create {
+}
+.table__cell_create {
+    text-align: center;
+    vertical-align: top;
+}
+
+.table__cell_create_plus {
+    @include flexCenter();
+    display: inline-flex;
+    position: relative;
+    background: #0eb83e;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+
+    &::before, &::after {
+        background: #000;
+        content: '';
+        position: absolute;
+
+    }
+
+    &::before {
+        width: 15px;
+        height: 2px;
+    }
+
+    &::after {
+        height: 15px;
+        width: 2px;
+    }
+}
+
+.table__cell__delete {
+    position: absolute;
+    right: -20px;
+}

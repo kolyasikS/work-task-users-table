@@ -1,0 +1,6 @@
+@import "src/styles/mixins";
+
+.login {
+    @include flexCenter();
+    width: 100%;
+}

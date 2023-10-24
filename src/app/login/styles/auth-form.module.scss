@@ -1,0 +1,47 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.form {
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.form__inner {
+    @include flexCenter(true);
+    gap: 20px;
+    background: $form-bg;
+    padding: 30px 40px;
+    width: 100%;
+    min-width: 450px;
+    overflow: hidden;
+}
+
+.form__title {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.form__inputs {
+    @include flexCenter(true);
+    background: inherit;
+    width: 100%;
+    gap: 20px;
+}
+
+.form__btns {
+    @include flexCenter(true);
+    width: 100%;
+    gap: 10px;
+}
+
+.form__btn {
+    color: #4c87e6;
+    transition: all 0.2s;
+
+    &:hover {
+        color: #218694;
+    }
+}
+
